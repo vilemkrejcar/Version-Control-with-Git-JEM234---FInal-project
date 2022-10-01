@@ -1,7 +1,7 @@
 # Version Control with Git (JEM234) Final project
 By Krejcar Vilém, Tůma Adam
 
-This is a homepage for our joint project for Master-level course Version Control with Git (JEM234) taught on IES. In our work, we're going to dig deep into the topic of "Advanced merging strategies".
+This is a homepage for our joint project for Master-level course Version Control with Git (JEM234) taught on IES. In our work, we're going to dig deep into the topic of "___Advanced merging strategies___".
 
 ## :evergreen_tree: Branch structure
 * _main_ branch is the final, so-called __live__ code which should be the equivalent for the production version
