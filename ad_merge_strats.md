@@ -20,7 +20,7 @@ Merging in Git is a tool which allows developed work in one branch to be merged 
 git merge
 ```
 
-Fast forward is the most default type of merging in git. It is used primarly when there are no new commits on the main branch so we can merge new commits linearly and move the HEAD pointer to the latest commit. The visualization bellow shows how the changes on the feature branch where linearly implemented to the develop (main) branch. 
+Fast forward is the most default type of merging in Git. It is used primarly when there are no new commits on the main branch so we can merge new commits linearly and move the HEAD pointer to the latest commit. The visualization bellow shows how the changes on the feature branch where linearly implemented to the develop (main) branch. 
 
 <img src="images/merge-without-ff@2x.png" alt="Visualization" width="600"/>
 
@@ -48,7 +48,7 @@ Recursive is the default merging strategy in Git when pulling or merging one bra
 git merge -s subtree branch_A branch_B
 ```
 
-Subtree is an extension of the recursive strategy when branch B is a child subtree of branch A. The subtree strategy will first update the changes of the tree structure of branch A and then it will merge the changes just as the recursive strategy.
+Subtree is an extension of the recursive strategy when branch B is a child subtree of branch A. Firstly, the subtree strategy will update the changes of the tree structure of branch A, and then it will merge the changes just as the recursive strategy.
 
 The subtree strategy is also often used when pulling subrepository changes to parent repository.
 
@@ -58,7 +58,7 @@ The subtree strategy is also often used when pulling subrepository changes to pa
 git merge -s resolve feature_branch main_branch
 ```
 
-Resolve strategy also uses three-way algorithm to merge two branches as does the recursive strategy. It looks for common commit ancestor of the two branches to base the merge on. Unlike recursive strategy, if it cannot find any common ancestor it will choose one randomly rather then creating a new one. 
+Resolve strategy also uses three-way algorithm to merge two branches as does the recursive strategy. It looks for common commit ancestor of the two branches to base the merge on. Unlike recursive strategy, if it cannot find any common ancestor, it will choose one randomly rather then creating a new one. 
 
 ### Octopus
 
