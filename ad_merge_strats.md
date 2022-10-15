@@ -1,7 +1,7 @@
 # Advanced merging strategies
 Merging in Git is a tool which allows developed work in one branch to be merged back into the main line of development, or in general to merge work between two branches. There are several strategies for merging, which allow for different ways in which the algorithm will merge work across two branches. We cover some of the most popular merging strategies that come with Git.
 
-## Contents
+## :notebook_with_decorative_cover: Contents
 - [Strategies](#strategies)
     - [Fast forward](#fast-forward)
     - [No fast forward](#no-fast-forward)
@@ -12,9 +12,9 @@ Merging in Git is a tool which allows developed work in one branch to be merged 
     - [Ours](#ours)
 - [Sources](#sources)
 
-## Strategies
+## :hocho: Strategies
 
-### Fast Forward
+### :black_circle: Fast Forward
 
 ```
 git merge
@@ -24,7 +24,7 @@ Fast forward is the most default type of merging in Git. It is used primarly whe
 
 <img src="images/merge-without-ff@2x.png" alt="Visualization" width="600"/>
 
-### No Fast Forward
+### :black_circle: No Fast Forward
 
 ```
 git merge --no-ff
@@ -32,7 +32,7 @@ git merge --no-ff
 
 Adding the --no-ff will seperate the last few commits on a seperate branch so we can clearly see the history in the branch structure as shown on the picture as well.
 
-### Recursive
+### :black_circle: Recursive
 
 ```
 git merge -s recursive feature_branch main_branch
@@ -42,7 +42,7 @@ Recursive is the default merging strategy in Git when pulling or merging one bra
 
 <img src="images/recursive.png" alt="Visualization recursive" width="600"/>
 
-### Subtree
+### :black_circle: Subtree
 
 ```
 git merge -s subtree branch_A branch_B
@@ -52,7 +52,7 @@ Subtree is an extension of the recursive strategy when branch B is a child subtr
 
 The subtree strategy is also often used when pulling subrepository changes to parent repository.
 
-### Resolve
+### :black_circle: Resolve
 
 ```
 git merge -s resolve feature_branch main_branch
@@ -60,7 +60,7 @@ git merge -s resolve feature_branch main_branch
 
 Resolve strategy also uses three-way algorithm to merge two branches as does the recursive strategy. It looks for common commit ancestor of the two branches to base the merge on. Unlike recursive strategy, if it cannot find any common ancestor, it will choose one randomly rather then creating a new one. 
 
-### Octopus
+### :black_circle: Octopus
 
 ```
 git merge -s octopus branch_1 branch_2 ... branch_n
@@ -68,7 +68,7 @@ git merge -s octopus branch_1 branch_2 ... branch_n
 
 Octopus strategy is the default strategy when merging more than two branches, when for example more than one feature branches have been developed at once and need to be merged together. The advantage of this strategy is that it will create just one commit when merging rather than having multiple commits if the strategy would be to merge the branches one by one. 
 
-### Ours
+### :black_circle: Ours
 
 ```
 git merge -s ours branch_1 branch_2 ... branch_n
@@ -76,7 +76,7 @@ git merge -s ours branch_1 branch_2 ... branch_n
 
 This strategy is also used for merging multiple branches and it combines histories of the branches while only accepting changes made to the current HEAD. Changes made to other branches will be ignored. This is especially useful when one wants to merge old development branches with outdated code and create a new common ancestor for easier merging in the future.
 
-## Sources
+## :information_source: Sources
 List of sources used to obtain the information provided in this repository:
 - https://www.atlassian.com/git/tutorials/using-branches/merge-strategy
 - https://git-scm.com/docs/git-merge
